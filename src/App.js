@@ -15,7 +15,7 @@ function App() {
         },
         {
             date: new Date(2021, 12, 10),
-            description: 'LandRover Discovery',
+            description: 'Land Rover Discovery',
             amount: 10000.00
         }
     ]
@@ -23,10 +23,11 @@ function App() {
 
   return (
     <div>
-<h1>Начнем учить Реакт!</h1>
-        <CostItemComponents date={cost[0].date} description={cost[0].description} amount={cost[0].amount}></CostItemComponents>
-        <CostItemComponents date={cost[1].date} description={cost[1].description} amount={cost[1].amount}></CostItemComponents>
-        <CostItemComponents date={cost[2].date} description={cost[2].description} amount={cost[2].amount}></CostItemComponents>
+
+            <CostItemComponents date={cost[0].date} description={cost[0].description} amount={cost[0].amount}/>
+            <CostItemComponents date={cost[1].date} description={cost[1].description} amount={cost[1].amount}/>
+            <CostItemComponents date={cost[2].date} description={cost[2].description} amount={cost[2].amount}/>
+
     </div>
   );
 }
