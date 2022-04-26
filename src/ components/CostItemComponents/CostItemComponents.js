@@ -3,10 +3,6 @@ import React from 'react';
 import './CostItem.css'
 import {CostDateComponents} from "../CostDateComponents";
 
-
-
-
-
 const CostItemComponents = (props) => {
 
     return (
