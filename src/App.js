@@ -1,4 +1,4 @@
-import {CostComponents, CostItemComponents} from "./ components";
+import {CostComponents} from "./ components";
 
 function App() {
 
