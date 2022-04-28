@@ -1,8 +1,8 @@
-import {CostComponents} from "./ components";
+import {CostComponents, NewCostComponents} from "./ components";
 
-function App() {
+const App = () => {
 
-    const cost=[
+    const cost = [
         {
             date: new Date(2021, 2, 12),
             description: 'Холодильник',
@@ -21,13 +21,13 @@ function App() {
     ]
 
 
-  return (
-    <div>
+    return (
+        <div>
+            <NewCostComponents/>
+            <CostComponents cost={cost}/>
 
-        <CostComponents cost={cost}/>
-
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
