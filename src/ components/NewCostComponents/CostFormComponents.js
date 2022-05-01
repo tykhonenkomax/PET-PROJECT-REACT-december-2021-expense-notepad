@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 
 import './CostFormComponents.css'
 
-const CostFormComponents = () => {
+const CostFormComponents = (props) => {
     const [inputName, setInputName]=useState('');
     const [inputSum, setInputSum] = useState('');
     const [inputData,setInputData] = useState('');
@@ -29,7 +29,9 @@ const CostFormComponents = () => {
           sum: inputSum,
           data: new Date(inputData)
       }
-        console.log(costData);
+
+        props.onSaveCostData(costData)
+
       setInputName('');
        setInputSum('');
        setInputData('');
