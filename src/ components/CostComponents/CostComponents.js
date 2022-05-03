@@ -6,7 +6,7 @@ import {CardComponents} from "../CardComponents";
 import {CostFilterComponents} from "../CostFilterComponents";
 
 
-const CostComponents = ({cost}) => {
+const CostComponents = (props) => {
 
     const[selectYear, setSelectYear]=useState('2021')
 
@@ -15,14 +15,21 @@ const CostComponents = ({cost}) => {
     }
 
     return (
-        <CardComponents className={'costs'}>
         <div>
+        <CardComponents className={'costs'}>
+
             <CostFilterComponents year={selectYear} onChangeYear={changeYearHandler}/>
-            <CostItemComponents date={cost[0].date} description={cost[0].description} amount={cost[0].amount}/>
-            <CostItemComponents date={cost[1].date} description={cost[1].description} amount={cost[1].amount}/>
-            <CostItemComponents date={cost[2].date} description={cost[2].description} amount={cost[2].amount}/>
-        </div>
+            {
+                props.cost.map(costs =>
+                <CostItemComponents
+                    date={costs.date}
+                    description={costs.description}
+                    amount={costs.amount}
+                />)
+            }
         </CardComponents>
+        </div>
+
     );
 };
 
