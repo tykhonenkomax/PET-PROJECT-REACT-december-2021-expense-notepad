@@ -8,7 +8,8 @@ const CostItemComponents = (props) => {
 
     return (
         <CardComponents className="cost-item">
-            <CostDateComponents date={props.date}/>
+            <CostDateComponents date={props.cost}/>
+
         <div className="cost-item__description">
             <h2>{props.description}</h2>
             <div className="cost-item__price">${props.amount}</div>

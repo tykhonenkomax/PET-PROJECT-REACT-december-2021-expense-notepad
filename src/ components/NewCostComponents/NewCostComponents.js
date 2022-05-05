@@ -14,6 +14,7 @@ const NewCostComponents = (props) => {
 
         }
         props.onAddCost(costData)
+
     }
 
 

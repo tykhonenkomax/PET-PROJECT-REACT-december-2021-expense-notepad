@@ -14,22 +14,18 @@ const CostComponents = (props) => {
      setSelectYear(year);
     }
 
+
     return (
         <div>
         <CardComponents className={'costs'}>
 
             <CostFilterComponents year={selectYear} onChangeYear={changeYearHandler}/>
             {
-                props.cost.map(costs =>
-                <CostItemComponents
-                    date={costs.date}
-                    description={costs.description}
-                    amount={costs.amount}
-                />)
-            }
+           props.cost.map((costs)=>(<CostItemComponents cost={costs.date} description={costs.description}
+           amount={costs.amount}/>
+           ))}
         </CardComponents>
         </div>
-
     );
 };
 

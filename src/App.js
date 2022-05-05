@@ -34,8 +34,9 @@ const App = () => {
 
       setCost(prevCost => {
         return  [cost, ...prevCost]
-      })
-    }
+      });
+    };
+    console.log(cost)
 
     return (
         <div>
