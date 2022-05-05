@@ -7,6 +7,7 @@ import {CardComponents} from "../CardComponents";
 const CostItemComponents = (props) => {
 
     return (
+        <li>
         <CardComponents className="cost-item">
             <CostDateComponents date={props.cost}/>
 
@@ -15,6 +16,7 @@ const CostItemComponents = (props) => {
             <div className="cost-item__price">${props.amount}</div>
         </div>
         </CardComponents>
+        </li>
     );
 };
 

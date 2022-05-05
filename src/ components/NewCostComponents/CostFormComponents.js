@@ -55,8 +55,10 @@ const CostFormComponents = (props) => {
             <div className={'new-cost__control'}><label>Data</label>
                 <input type="date" min={'2019-01-01'} step={'2022-12-31'} onChange={dataChangeHandler} value={inputData}/>
             </div>
-            <div className={'new-cost__actions'} type='submit'><button>Додати витрату</button> </div>
-
+            <div className={'actions_cancellation'}>
+            <div className={'new-cost__actions'} type='submit' ><button>Додати витрату</button> </div>
+            <div className={'new-cost__cancellation'} type='button'><button onClick={props.onCancel}>Відміна</button> </div>
+            </div>
 
         </div>
     </form>

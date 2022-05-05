@@ -24,3 +24,13 @@
 .new-cost__actions {
     text-align: left;
 }
+
+
+.new-cost__cancellation{
+    text-align: left;
+}
+
+.actions_cancellation{
+    display: flex;
+    justify-content: center;
+}

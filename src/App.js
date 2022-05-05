@@ -36,7 +36,7 @@ const App = () => {
         return  [cost, ...prevCost]
       });
     };
-    console.log(cost)
+
 
     return (
         <div>
