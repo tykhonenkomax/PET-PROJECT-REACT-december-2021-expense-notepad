@@ -13,11 +13,12 @@ const DiagramComponents = (props) => {
         <div className={'diagram'}>
             {
                 props.dataSets.map((dataSet)=>(
+
               <BarComponents
                 key={dataSet.label}
                 value={dataSet.value}
                 maxValue={maxMonthCosts}
-                lable={dataSet.label}
+                label={dataSet.label}
                 />
                 ))}
 

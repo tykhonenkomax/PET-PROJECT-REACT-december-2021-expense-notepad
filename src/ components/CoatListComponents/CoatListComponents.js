@@ -7,7 +7,8 @@ import {CostItemComponents} from "../CostItemComponents";
 const CoatListComponents = (props) => {
 
 
-    if (props.cost.length ===0){
+
+    if (props.costs.length === 0){
         return <h2 className={'cost-list__fallback'}>
             В цьому році витрат немає!
         </h2>
@@ -18,12 +19,12 @@ const CoatListComponents = (props) => {
     return (
        <ul className={'cost-list'}>
            {
-               props.cost.map((costs) => (
+               props.costs.map((cost) => (
                    <CostItemComponents
-                       key={costs.id}
-                       cost={costs.date}
-                       description={costs.description}
-                       amount={costs.amount}
+                       key={cost.id}
+                       cost={cost.date}
+                       description={cost.description}
+                       amount={cost.amount}
                    />
                ))
            }
