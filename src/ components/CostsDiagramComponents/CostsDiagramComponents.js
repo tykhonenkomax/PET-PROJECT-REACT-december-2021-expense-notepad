@@ -1,8 +1,9 @@
 import React from 'react';
 import {DiagramComponents} from "../DiagramComponents/DiagramComponents/DiagramComponents";
 
+
 const CostsDiagramComponents = (props) => {
-    
+
     let diagramDataSets = [
         {label: "Jan",value:0},
         {label: "Feb",value:0},
@@ -19,7 +20,7 @@ const CostsDiagramComponents = (props) => {
     ]
 
     for (const cost of props.costs){
-        const costMonth = cost.data.getMonth();
+        const costMonth = cost.date.getMonth();
 
         diagramDataSets[costMonth].value +=cost.amount;
 
