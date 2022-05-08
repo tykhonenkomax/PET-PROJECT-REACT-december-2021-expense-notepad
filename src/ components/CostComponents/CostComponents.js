@@ -5,6 +5,9 @@ import './Cost.css'
 import {CardComponents} from "../CardComponents";
 import {CostFilterComponents} from "../CostFilterComponents";
 import {CoatListComponents} from "../CoatListComponents/CoatListComponents";
+import {CostsDiagramComponents} from "../CostsDiagramComponents";
+
+
 
 
 const CostComponents = (props) => {
@@ -15,20 +18,18 @@ const CostComponents = (props) => {
      setSelectYear(year);
     };
     
-    const filteredCosts = props.cost.filter(costs=>
+    const filteredCosts = props.cost.filter((costs)=>
     {
-     return    costs.date.getFullYear().toString() === selectYear;
+     return costs.date.getFullYear().toString() === selectYear;
+
     })
-
-
-
-
 
     return (
         <div>
         <CardComponents className={'costs'}>
             <CostFilterComponents year={selectYear} onChangeYear={changeYearHandler}/>
-            <CoatListComponents cost={filteredCosts}/>
+            <CostsDiagramComponents costs={filteredCosts}/>
+            <CoatListComponents costs={filteredCosts}/>
 
         </CardComponents>
         </div>
